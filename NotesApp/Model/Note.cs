@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -9,6 +10,7 @@ namespace NotesApp.Model
     {
 		private int id;
 
+		[PrimaryKey, AutoIncrement]
 		public int Id
 		{
 			get { return id; }
@@ -21,6 +23,7 @@ namespace NotesApp.Model
 
 		private int notebookId;
 
+		[Indexed]
 		public int NotebookId
 		{
 			get { return notebookId; }

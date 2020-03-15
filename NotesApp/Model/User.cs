@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -9,6 +10,7 @@ namespace NotesApp.Model
     {
 		private int id;
 
+		[PrimaryKey, AutoIncrement]
 		public int Id
 		{
 			get { return id; }
@@ -21,6 +23,7 @@ namespace NotesApp.Model
 
 		private string firstName;
 
+		[MaxLength(50)]
 		public string FirstName
 		{
 			get { return firstName; }
@@ -33,6 +36,7 @@ namespace NotesApp.Model
 
 		private string lastName;
 
+		[MaxLength(50)]
 		public string LastName
 		{
 			get { return lastName; }
