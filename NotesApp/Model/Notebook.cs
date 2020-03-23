@@ -26,10 +26,10 @@ namespace NotesApp.Model
 		[Indexed]
 		public int UserId
 		{
-			get { return UserId; }
+			get { return userId; }
 			set
 			{
-				UserId = value;
+				userId = value;
 				OnPropertyChanged("UserId");
 			}
 		}
